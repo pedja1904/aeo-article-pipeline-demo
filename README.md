@@ -32,7 +32,7 @@ flowchart TD
     W --> G2{Word count gate<br/>Style gate<br/>Structure gate<br/>Stat attribution gate}
     G2 --> E[Evaluator<br/>scores 9 dimensions, cannot edit]
     E -- revise, max 2 rounds --> W
-    E -- pass --> G3{External AI visibility score<br/>Schema markup build}
+    E -- pass --> G3{GeoScore AI visibility check<br/>Schema markup build}
     G3 --> P[Publish-ready article]
 ```
 
@@ -56,8 +56,18 @@ flowchart TD
 | Style lint | 137 banned AI phrases, em dashes, semicolons, wall-of-text paragraphs | Feeds the evaluator's voice score |
 | Structure | Question headings, answer length, answer cards, FAQ, tables, visuals | Feeds the evaluator's structure score |
 | Stat attribution | Every statistic names its source | Feeds the evaluator's sourcing score |
-| AI visibility score | External scoring of how citable the article is for AI engines | Max 2 calls per article |
+| GeoScore | Independent score of how likely AI engines are to cite the article | Under 70: one targeted fix round, then ship |
 | Schema build | Generates the JSON-LD (Article + FAQ) for the page | Blocks publishing if the metadata is invalid |
+
+### GeoScore: an independent second opinion
+
+The evaluator is part of the system, so the pipeline also gets a score from outside it. After the evaluator passes a draft, the article goes to GeoScore, an external API (via RapidAPI) that scores how likely generative engines (ChatGPT, Perplexity, Google AI Overviews) are to cite the content, and returns a list of suggested fixes.
+
+- **70 or above:** the article ships as it is.
+- **Under 70:** the writer gets the fixes once, the article is scored once more, then it ships on that result. No endless loops.
+- **Not every suggestion is accepted.** Fixes that would make the article worse for a human reader (padding the word count, stuffing keywords, longer sentences, hedged positions) are rejected, and the run report says which ones and why. The reader comes first, the score second.
+- **Guardrails are in code, not in a prompt:** maximum 2 calls per article and 50 per month, enforced by the script. The AI agents never see the API keys and cannot go over the limit.
+- **The scorer never blocks delivery.** If the API is down or the quota is used up, the article ships on the evaluator's verdict.
 
 ### The evaluator's nine dimensions
 
