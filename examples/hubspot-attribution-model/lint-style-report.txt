@@ -1,0 +1,20 @@
+=== BANNED TERMS ===
+  none
+
+=== PUNCTUATION ===
+  none
+
+=== BLOCK PARAGRAPHS (3+ sentences on one line) ===
+  none
+
+=== UNATTRIBUTED QUOTES ===
+  none
+
+=== SUMMARY ===
+  banned terms:     0
+  punctuation:      0
+  block paragraphs: 0
+  unattrib. quotes: 0
+  TOTAL:            0
+
+PASS. No style violations.

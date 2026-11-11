@@ -1,0 +1,193 @@
+# ==========================================================================
+#  BANNED TERMS
+#  Read by scripts/lint-style.sh. One term or phrase per line.
+#  Lines starting with # are comments and are ignored.
+#  Matching is case-insensitive with word boundaries.
+#
+#  EDIT THIS FILE, not the agent prompts. A 200-item blacklist is exactly
+#  the thing a model forgets halfway through a draft. grep never forgets.
+# ==========================================================================
+
+# --- AI-tell intros --------------------------------------------------------
+in today's fast-paced
+in today's digital era
+in a world where
+in a sea of
+since the dawn of time
+we've all been there
+let's dive in
+dive into
+delve
+embark
+
+# --- Corporate filler nouns -----------------------------------------------
+digital landscape
+tapestry
+paradigm
+paradigm shift
+synergy
+realm
+annals
+nuance
+labyrinthine
+holistic approach
+robust framework
+seamless integration
+game-changer
+game-changing
+
+# --- Filler connectives (AI cadence tells) ---------------------------------
+moreover
+furthermore
+nonetheless
+notwithstanding
+consequently
+accordingly
+thus
+hence
+indeed
+firstly
+secondly
+lastly
+last but not least
+in conclusion
+to summarize
+to put it simply
+in a nutshell
+needless to say
+it goes without saying
+with that being said
+as a matter of fact
+it's worth mentioning
+it's worth noting
+important to note
+this is not an exhaustive list
+
+# --- Hedging (kills re-ranker confidence) ----------------------------------
+it could be argued
+some experts suggest
+may potentially
+there is no one-size-fits-all
+it depends on
+you may want to
+arguably
+
+# --- Unsourced-stat hedges (a number with no source is a Critical) ---------
+directional industry data
+widely cited directional data
+industry data suggests
+per multiple vendor reports
+widely observed in industry
+no single canonical source
+commonly cited
+industry benchmarks suggest
+studies show
+research indicates
+
+# --- Vague quantifiers (replace with a real number) ------------------------
+a significant number of
+a vast majority
+dozens of
+dramatically
+substantially
+
+# --- Forbidden verbs -------------------------------------------------------
+leverage
+leveraging
+unlock
+unleash
+supercharge
+revolutionize
+revolutionise
+streamline
+facilitate
+foster
+augment
+utilize
+utilise
+maximize
+maximise
+underscore
+underscores
+resonate
+captivate
+cultivate
+adhere
+navigate the complexities
+
+# --- Forbidden adjectives --------------------------------------------------
+cutting-edge
+ever-evolving
+fast-paced
+multifaceted
+paramount
+pivotal
+seamless
+synergistic
+transformative
+unparalleled
+comprehensive
+commendable
+exemplary
+
+# --- Punctuation the linter checks separately -------------------------------
+# em-dash and semicolon are handled by the script, not listed here
+
+# ==========================================================================
+# ==========================================================================
+#  ENABLED FROM THE ANTI-AI LIST
+#  Formal discourse markers and hype words. English reads fine without them.
+# ==========================================================================
+however
+therefore
+additionally
+similarly
+notably
+alternatively
+specifically
+generally
+essentially
+ultimately
+optimization
+optimize
+efficiency
+integration
+implementation
+innovation
+transformation
+enhance
+ensure
+essential
+vital
+crucial
+effective
+efficient
+dynamic
+proven
+unique
+takeaway
+moving forward
+going forward
+when it comes to
+
+# ==========================================================================
+#  DELIBERATELY NOT ENABLED
+#  These are ordinary English. Banning them produces stilted copy that reads
+#  MORE artificial, not less. "key" is left off because it false-positives
+#  constantly (key metric, key account, keyword).
+#  Uncomment any of them if you disagree.
+# ==========================================================================
+# while
+# although
+# even though
+# despite
+# because
+# also
+# unless
+# in contrast
+# as well as
+# given that
+# in order to
+# due to
+# even if
+# key

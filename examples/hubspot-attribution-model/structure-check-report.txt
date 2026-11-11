@@ -1,0 +1,55 @@
+=== QUICK ANSWER ===
+  line 20: 72 words   ok
+
+=== HEADINGS ===
+  question headings: 12 of 15 (80%)   ok
+  hierarchy: sequential, no skipped levels   ok
+
+=== LOGIC CHUNKS (134-167 words, content H2s only) ===
+  line 22   Why does data hygiene dictate HubSpot attribution su...  167 w   ok
+  line 51   How does your HubSpot tier restrict attribution opti...  160 w   ok
+  line 86   Why should B2B companies reject single-touch attribu...  154 w   ok
+  line 114  When should you use the U-Shaped attribution model?      158 w   ok
+  line 139  Why is the W-Shaped model considered the standard fo...  148 w   ok
+  line 167  When does the Full-Path model become mandatory?          151 w   ok
+  line 191  How should you handle discrepancies between differen...  155 w   ok
+  line 217  How do you bridge the gap between software tracking ...  153 w   ok
+
+=== ANSWER CARDS (3-7 unlabelled bullets per content H2) ===
+  NOTE: numbered lists are labelled and do NOT count as Answer Cards.
+  line 22   Why does data hygiene dictate HubSpot attribution su...    4 bullets   ok
+  line 51   How does your HubSpot tier restrict attribution opti...    4 bullets   ok
+  line 86   Why should B2B companies reject single-touch attribu...    3 bullets   ok
+  line 114  When should you use the U-Shaped attribution model?        4 bullets   ok
+  line 139  Why is the W-Shaped model considered the standard fo...    3 bullets   ok
+  line 167  When does the Full-Path model become mandatory?            3 bullets   ok
+  line 191  How should you handle discrepancies between differen...    3 bullets   ok
+  line 217  How do you bridge the gap between software tracking ...    4 bullets   ok
+
+=== LISTS AND TABLES ===
+  tables: 1   ok (minimum 1 for standard)
+  numbered list present: yes   ok
+  bulleted list present: yes   ok
+
+=== FAQ (4-6 questions, answers 40-60 words) ===
+  questions: 4   ok
+  line 258  answer 1:  53 words   ok
+  line 263  answer 2:  46 words   ok
+  line 268  answer 3:  54 words   ok
+  line 273  answer 4:  52 words   ok
+
+=== VISUALS ===
+  markers: 8 across 2067 body words  (1 per 258 words)   ok
+
+=== SUMMARY ===
+  body words:       2067
+  content H2s:      8
+  FAILCOUNT:        0
+
+=== SOURCES SECTION URLS ===
+  source bullets:   8
+  missing URLs:     0   ok
+
+  TOTAL FAILCOUNT (structure + sources): 0
+
+PASS. All structural minimums met.
